@@ -1,8 +1,11 @@
 import Head from 'next/head'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-import About from './about'
-import HomePage from './home'
+import Skills from './skills'
+import Contact from './contact'
+import Resume from './resume'
+import Works from './works'
+import Main from './home'
 
 export default function Home() {
   return (
@@ -13,8 +16,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar/>
-      <HomePage/>
-      <About/>
+      <Main/>
+      <Skills/>
+{/*       <Resume/>
+      <Works/> */}
+      <Contact/>
       <Footer/>
     </div>
   )

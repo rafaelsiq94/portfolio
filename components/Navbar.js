@@ -27,19 +27,19 @@ function Navbar() {
                     smooth={true}
                     offset={50}
                     duration={500}
-                    className="cursor-pointer hover:text-green dark:text-green hover:dark:text-greenDark px-3 py-2 text-md"
+                    className="cursor-pointer hover:text-green px-3 py-2 text-md"
                   >
                     Home
                   </Link>
                   <Link
-                    activeClass="About"
-                    to="about"
+                    activeClass="Skills"
+                    to="skills"
                     smooth={true}
                     offset={50}
                     duration={500}
-                    className="cursor-pointer hover:text-green dark:text-green hover:dark:text-greenDark px-3 py-2 text-md"
+                    className="cursor-pointer hover:text-green px-3 py-2 text-md"
                   >
-                    About
+                    Skills
                   </Link>
                   <Link
                     activeClass="Resume"
@@ -47,7 +47,7 @@ function Navbar() {
                     smooth={true}
                     offset={50}
                     duration={500}
-                    className="cursor-pointer hover:text-green dark:text-green hover:dark:text-greenDark px-3 py-2 text-md"
+                    className="cursor-pointer hover:text-green px-3 py-2 text-md"
                   >
                     Resume
                   </Link>
@@ -57,7 +57,7 @@ function Navbar() {
                     smooth={true}
                     offset={50}
                     duration={500}
-                    className="cursor-pointer hover:text-green dark:text-green hover:dark:text-greenDark px-3 py-2 text-md"
+                    className="cursor-pointer hover:text-green px-3 py-2 text-md"
                   >
                     Works
                   </Link>
@@ -67,7 +67,7 @@ function Navbar() {
                     smooth={true}
                     offset={50}
                     duration={500}
-                    className="cursor-pointer hover:text-green dark:text-green hover:dark:text-greenDark px-3 py-2 text-md"
+                    className="cursor-pointer hover:text-green hover:dark:text-greenDark px-3 py-2 text-md"
                   >
                     Contact
                   </Link>
@@ -149,15 +149,15 @@ function Navbar() {
                   Home
                 </Link>
                 <Link
-                  href="/about"
-                  activeClass="about"
-                  to="about"
+                  href="/skills"
+                  activeClass="skills"
+                  to="skills"
                   smooth={true}
                   offset={50}
                   duration={500}
                   className="cursor-pointer hover:text-green dark:text-green hover:dark:text-greenDark block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  About
+                  Skills
                 </Link>
 
                 <Link
