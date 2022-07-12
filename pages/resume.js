@@ -1,73 +1,49 @@
-import { HiCode, HiChartBar } from "react-icons/hi";
-import { FaNetworkWired } from "react-icons/fa";
-import { BsPeopleFill } from "react-icons/bs";
-import { Element } from "react-scroll";
+import Image from 'next/image';
+import React from 'react';
+import MundoLolita from '../public/assets/resume/mundololita.jpeg';
+import TIE from '../public/assets/resume/tie.jpeg';
 
-function Resume() {
-	return (
-		<Element id="resume" name="resume">
-			<div className="w-full my-40 h-auto flex flex-col justify-center items-center ">
-				<h1 className="text-indigo-900 text-6xl font-bold text-center">
-					Resume
-				</h1>
-				<div className="flex justify-items-start items-center mx-40 gap-10 mt-20">
-					<div className="flex  flex-col justify-center items-center">
-						<div className="flex justify-center items-center">
-							<HiCode className="w-10 h-10 bg-yellow-400 text-green m-3 p-1 shadow-xl rounded-md" />
-							<h2 className="text-xl dark:text-title font-semibold">
-								Software Development
-							</h2>
-						</div>
-						<p className="md:text-base dark:text-text md:text-center sm:text-left sm:text-sm">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							Perferendis aliquid fuga, asperiores voluptas expedita nulla.
-						</p>
-					</div>
-
-					<div className="flex flex-col justify-center items-center">
-						<div className="flex justify-center items-center">
-							<HiChartBar className="w-10 h-10 bg-red-400 text-green m-3 p-1 shadow-xl rounded-md" />
-							<h2 className="text-xl dark:text-title font-semibold">
-								Business Intelligence
-							</h2>
-						</div>
-						<p className="md:text-base dark:text-text md:text-center sm:text-sm sm:text-left">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							Perferendis aliquid fuga, asperiores voluptas expedita nulla.
-						</p>
-					</div>
-				</div>
-
-				<div className="flex justify-items-start items-center mx-40 gap-10 mt-20">
-					<div className="flex flex-col justify-center items-center">
-						<div className="flex justify-center items-center">
-							<FaNetworkWired className="w-10 h-10 text-green m-3 p-1 shadow-xl rounded-md" />
-							<h2 className="text-xl dark:text-title font-semibold ">
-								Infraestructure
-							</h2>
-						</div>
-						<p className="md:text-base dark:text-text md:text-center sm:text-left sm:text-sm">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							Perferendis aliquid fuga, asperiores voluptas expedita nulla.
-						</p>
-					</div>
-
-					<div className="flex flex-col justify-center items-center">
-						<div className="flex justify-center items-center">
-							<BsPeopleFill className="w-10 h-10 text-green m-3 p-1 shadow-xl rounded-md" />
-							<h2 className="text-xl dark:text-title font-semibold">
-								Management
-							</h2>
-						</div>
-						<p className="md:text-base dark:text-text md:text-center sm:text-left sm:text-sm">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							Perferendis aliquid fuga, asperiores voluptas expedita nulla.
-						</p>
-					</div>
-				</div>
-			</div>
-		</Element>
-	);
-}
+const Resume = () => {
+  return (
+    <div id='resume' className='w-full lg:h-screen p-2'>
+      <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full'>
+        <p className='text-xl tracking-widest'>
+          My last 2 <span className='text-green'>Experiences</span>
+        </p>
+        <h2 className='py-4'>Download the full PDF <span className='text-green'>here</span>!</h2>
+        <div className='grid grid-cols-2 lg:grid-cols-2 gap-8'>
+          <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300 dark:bg-elements'>
+            <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+              <div className='items-center p-6'>
+                <Image src={MundoLolita} width='200px' height='200px' alt='/' className='rounded-full' />
+              </div>
+              <div className='flex flex-col justify-center'>
+                <h3 className='text-tile'>Mundo Lolita</h3>
+								<h3 className='text-green'>IT Analyst</h3>
+								<h3 className='dark:text-text'>2021-Today</h3>
+								<br/>
+								<span className='dark:text-text'>Software Development with Python, Django, JavaScript and React. I developed many integrations between VTEX, carriers, TikTok, Pinterest, OnClick ERP to achive better results with our ecommerce and create a Datawarehouse to support BI Dashboards.</span>
+              </div>
+            </div>
+          </div>
+          <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300 dark:bg-elements'>
+            <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+              <div className='items-center p-6'>
+                <Image src={TIE} width='200px' height='200px' alt='/' className='rounded-full' />
+              </div>
+              <div className='flex flex-col justify-center'>
+                <h3 className='text-tile'>TIE Tecnologia da Informação Empresarial</h3>
+								<h3 className='text-green'>IT Coordinator</h3>
+								<h3 className='dark:text-text'>2018-2021</h3>
+								<br/>
+								<span className='dark:text-text'>Coordination of IT technical support team, projects for infraestructure, security, improvements and Microsoft licensing. I provided an increase in the solutions offered by the company, through partnerships with Kaspersky, VMWare and Veeam.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default Resume;

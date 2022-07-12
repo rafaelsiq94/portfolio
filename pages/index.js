@@ -4,7 +4,6 @@ import Navbar from '../components/Navbar'
 import Skills from './skills'
 import Contact from './contact'
 import Resume from './resume'
-import Works from './works'
 import Main from './home'
 
 export default function Home() {
@@ -18,8 +17,7 @@ export default function Home() {
       <Navbar/>
       <Main/>
       <Skills/>
-{/*       <Resume/>
-      <Works/> */}
+      <Resume/>
       <Contact/>
       <Footer/>
     </div>

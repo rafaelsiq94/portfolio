@@ -52,16 +52,6 @@ function Navbar() {
                     Resume
                   </Link>
                   <Link
-                    activeClass="Works"
-                    to="works"
-                    smooth={true}
-                    offset={50}
-                    duration={500}
-                    className="cursor-pointer hover:text-green px-3 py-2 text-md"
-                  >
-                    Works
-                  </Link>
-                  <Link
                     activeClass="Contact"
                     to="contact"
                     smooth={true}
@@ -153,7 +143,7 @@ function Navbar() {
                   activeClass="skills"
                   to="skills"
                   smooth={true}
-                  offset={50}
+                  offset={-100}
                   duration={500}
                   className="cursor-pointer hover:text-green dark:text-green hover:dark:text-greenDark block px-3 py-2 rounded-md text-base font-medium"
                 >
@@ -165,22 +155,11 @@ function Navbar() {
                   activeClass="resume"
                   to="resume"
                   smooth={true}
-                  offset={50}
+                  offset={-100}
                   duration={500}
                   className="cursor-pointer hover:text-green dark:text-green hover:dark:text-greenDark block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Resume
-                </Link>
-                <Link
-                  href="/works"
-                  activeClass="works"
-                  to="works"
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                  className="cursor-pointer hover:text-green dark:text-green hover:dark:text-greenDark block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Works
                 </Link>
 
                 <Link
