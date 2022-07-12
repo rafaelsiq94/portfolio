@@ -7,8 +7,12 @@ export default function Theme() {
   const {theme, setTheme} = useTheme('dark');
 
   const toggleDarkMode = () => {
+    console.log(darkMode);
+    console.log(theme);
     setTheme(theme === 'system' ? 'light' : theme === 'dark' ? 'light' : 'dark');
     setDarkMode(darkMode === false ? true : false);
+    console.log(darkMode);
+    console.log(theme);
   }
 
   return (

@@ -25,7 +25,6 @@ function Navbar() {
                     activeClass="Home"
                     to="home"
                     smooth={true}
-                    offset={50}
                     duration={500}
                     className="cursor-pointer hover:text-green px-3 py-2 text-md"
                   >
@@ -132,7 +131,6 @@ function Navbar() {
                   activeClass="home"
                   to="home"
                   smooth={true}
-                  offset={50}
                   duration={500}
                   className="cursor-pointer hover:text-green dark:text-green hover:dark:text-greenDark block px-3 py-2 rounded-md text-base font-medium"
                 >
