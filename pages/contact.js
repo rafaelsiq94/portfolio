@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { Link } from "react-scroll";
-import { HiOutlineChevronDoubleUp } from "react-icons/hi";
+import useTranslation from "next-translate/useTranslation";
 
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  let { t } = useTranslation();
 
   const handleSubmit = () => {
     setName(name);
@@ -19,7 +19,7 @@ const Contact = () => {
     <div id="contact" className="w-full lg:h-screen">
       <div className="max-w-[1240px] m-auto flex flex-col justify-center h-full ">
         <h2 className="py-4">
-          Say <span className="text-green">Hi</span>!
+          {t("translate:contact-title-1")}<span className="text-green">{t("translate:contact-title-2")}</span>!
         </h2>
         <div className="col-span-3 w-full h-auto shadow-xl rounded-xl lg:p-4">
           <div className="p-4">
@@ -30,7 +30,7 @@ const Contact = () => {
             >
               <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                 <div className="flex flex-col">
-                  <label className="uppercase text-sm py-2">Name</label>
+                  <label className="uppercase text-sm py-2">{t("translate:contact-name")}</label>
                   <input
                     className="border-2 rounded-lg p-2 flex border-text2"
                     type="text"
@@ -51,7 +51,7 @@ const Contact = () => {
                 </div>
               </div>
               <div className="flex flex-col py-2">
-                <label className="uppercase text-sm py-2">Subject</label>
+                <label className="uppercase text-sm py-2">{t("translate:contact-subject")}</label>
                 <input
                   className="border-2 rounded-lg p-2 flex border-text2"
                   type="text"
@@ -61,7 +61,7 @@ const Contact = () => {
                 />
               </div>
               <div className="flex flex-col py-2">
-                <label className="uppercase text-sm py-2">Message</label>
+                <label className="uppercase text-sm py-2">{t("translate:contact-message")}</label>
                 <textarea
                   className="border-2 rounded-lg p-2 border-text2"
                   rows="5"
@@ -71,27 +71,11 @@ const Contact = () => {
                 ></textarea>
               </div>
               <button className="w-full p-4 mt-4 text-white bg-green hover:bg-greenDark shadow-xl uppercase rounded-xl">
-                Send Message
+              {t("translate:contact-button")}
               </button>
             </form>
           </div>
         </div>
-{/*         <div className="flex justify-center py-12">
-          <Link
-            activeClass="Home"
-            to="home"
-            smooth={true}
-            offset={50}
-            duration={500}
-          >
-              <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300 dark:bg-elements">
-                <HiOutlineChevronDoubleUp
-                  className="text-green hover:text-greenDark"
-                  size={30}
-                />
-              </div>
-          </Link>
-        </div> */}
       </div>
     </div>
   );

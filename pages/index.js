@@ -5,8 +5,11 @@ import Skills from './skills'
 import Contact from './contact'
 import Resume from './resume'
 import Main from './home'
+import useTranslation from 'next-translate/useTranslation';
 
 export default function Home() {
+  let { t } = useTranslation();
+
   return (
     <div>
       <Head>

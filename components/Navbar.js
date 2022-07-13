@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import { Link } from "react-scroll";
 import Theme from "./Theme";
+import useTranslation from "next-translate/useTranslation";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  let { t } = useTranslation();
 
   return (
     <div>
@@ -28,7 +30,7 @@ function Navbar() {
                     duration={500}
                     className="cursor-pointer hover:text-green px-3 py-2 text-md"
                   >
-                    Home
+                    {t("translate:nav-1")}
                   </Link>
                   <Link
                     activeClass="Skills"
@@ -38,7 +40,7 @@ function Navbar() {
                     duration={500}
                     className="cursor-pointer hover:text-green px-3 py-2 text-md"
                   >
-                    Skills
+                    {t("translate:nav-2")}
                   </Link>
                   <Link
                     activeClass="Resume"
@@ -48,7 +50,7 @@ function Navbar() {
                     duration={500}
                     className="cursor-pointer hover:text-green px-3 py-2 text-md"
                   >
-                    Resume
+                    {t("translate:nav-3")}
                   </Link>
                   <Link
                     activeClass="Contact"
@@ -58,7 +60,7 @@ function Navbar() {
                     duration={500}
                     className="cursor-pointer hover:text-green hover:dark:text-greenDark px-3 py-2 text-md"
                   >
-                    Contact
+                    {t("translate:nav-4")}
                   </Link>
                 </div>
               </div>

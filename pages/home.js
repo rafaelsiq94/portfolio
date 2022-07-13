@@ -3,22 +3,23 @@ import React from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import useTranslation from "next-translate/useTranslation";
 
 const Main = () => {
+  let { t } = useTranslation();
+
   return (
     <div id="home" className="w-full h-screen text-center">
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <div>
           <h1 className="py-4 dark:text-title">
-            Hi, I&#39;m <span className="text-green"> Rafael</span>!
+            {t("translate:home-title")}<span className="text-green"> Rafael</span>!
           </h1>
           <p className="py-4 dark:text-text sm:max-w-[70%] m-auto">
-            Experienced IT professional with knowledge in{" "}
-            <span className="text-green">software development</span>,{" "}
-            <span className="text-green">IT infraestructure</span> and{" "}
-            <span className="text-green">business intelligence</span>, always
-            looking for challanges and studying new technologies. This website
-            was made with Next.js & Tailwind CSS. :)
+            {t("translate:home-text")}
+            <span className="text-green">{t("translate:home-text-item-1")}</span>,
+            <span className="text-green">{t("translate:home-text-item-2")}</span> {t("translate:home-text-item-3")}
+            <span className="text-green"> business intelligence</span>{t("translate:home-text-2")}
           </p>
           <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
             <a
