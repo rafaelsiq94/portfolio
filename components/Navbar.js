@@ -136,7 +136,7 @@ function Navbar() {
                   duration={500}
                   className="cursor-pointer hover:text-green dark:text-green hover:dark:text-greenDark block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  Home
+                  {t("translate:nav-1")}
                 </Link>
                 <Link
                   href="/skills"
@@ -147,7 +147,7 @@ function Navbar() {
                   duration={500}
                   className="cursor-pointer hover:text-green dark:text-green hover:dark:text-greenDark block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  Skills
+                  {t("translate:nav-2")}
                 </Link>
 
                 <Link
@@ -159,7 +159,7 @@ function Navbar() {
                   duration={500}
                   className="cursor-pointer hover:text-green dark:text-green hover:dark:text-greenDark block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  Resume
+                  {t("translate:nav-3")}
                 </Link>
 
                 <Link
@@ -171,7 +171,7 @@ function Navbar() {
                   duration={500}
                   className="cursor-pointer hover:text-green dark:text-green hover:dark:text-greenDark block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  Contact
+                  {t("translate:nav-4")}
                 </Link>
               </div>
             </div>
