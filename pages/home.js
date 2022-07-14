@@ -51,11 +51,11 @@ const Main = () => {
                 <AiOutlineMail />
               </div>
             </Link>
-            {/* <Link href="/resume"> */}
-              <div className="rounded-full shadow-lg shadow-gray-400 p-6 dark:bg-elements cursor-pointer hover:scale-110 hover:text-green ease-in duration-300">
-                <BsFillPersonLinesFill />
-              </div>
-            {/* </Link> */}
+            <a href="/assets/resume/RAFAELDESIQUEIRA.pdf" download>
+                <div className="rounded-full shadow-lg shadow-gray-400 p-6 dark:bg-elements cursor-pointer hover:scale-110 hover:text-green ease-in duration-300">
+                  <BsFillPersonLinesFill />
+                </div>
+            </a>
           </div>
         </div>
       </div>

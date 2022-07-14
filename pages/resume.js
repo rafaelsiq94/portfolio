@@ -13,7 +13,7 @@ const Resume = () => {
         <p className='text-xl tracking-widest'>
           {t("translate:resume-title-1")}<span className='text-green'>{t("translate:resume-title-2")}</span>
         </p>
-        <h2 className='py-4'>{t("translate:resume-sub-1")}<span className='text-green'>{t("translate:resume-sub-2")}</span>!</h2>
+        <h2 className='py-4'>{t("translate:resume-sub-1")}<a href="/assets/resume/RAFAELDESIQUEIRA.pdf" download><span className='text-green hover:scale-110 hover:text-greenDark cursor-pointer'>{t("translate:resume-sub-2")}</span></a>!</h2>
         <div className='grid grid-cols-2 lg:grid-cols-2 gap-8'>
           <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300 dark:bg-elements'>
             <div className='grid grid-cols-2 gap-4 justify-center items-center'>
