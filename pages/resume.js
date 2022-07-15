@@ -33,10 +33,10 @@ const Resume = () => {
           )}
           !
         </h2>
-        <div className="grid grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300 dark:bg-elements">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="items-center p-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 justify-items-center items-center">
+              <div>
                 <Image
                   src={MundoLolita}
                   width="200px"
@@ -61,8 +61,8 @@ const Resume = () => {
             </div>
           </div>
           <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300 dark:bg-elements">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="items-center p-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 justify-items-center items-center">
+              <div>
                 <Image
                   src={TIE}
                   width="200px"
