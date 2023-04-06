@@ -1,6 +1,7 @@
 import Image from "next/image";
-import React from "react";
+import Job from "../components/Job";
 import MundoLolita from "../public/assets/resume/mundololita.jpeg";
+import WayCarbon from "../public/assets/resume/waycarbon.jpeg";
 import TIE from "../public/assets/resume/tie.jpeg";
 import useTranslation from "next-translate/useTranslation";
 import { useRouter } from "next/router";
@@ -34,58 +35,20 @@ const Resume = () => {
           !
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300 dark:bg-elements">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 justify-items-center items-center">
-              <div>
-                <Image
-                  src={MundoLolita}
-                  width="200px"
-                  height="200px"
-                  alt="/"
-                  className="rounded-full"
-                />
-              </div>
-              <div className="flex flex-col justify-center">
-                <h3 className="text-tile">Mundo Lolita</h3>
-                <h3 className="text-green">
-                  {t("translate:resume-job-title-1")}
-                </h3>
-                <h3 className="dark:text-text">
-                  2021-{t("translate:resume-job-date-1")}
-                </h3>
-                <br />
-                <span className="dark:text-text">
-                  {t("translate:resume-job-description-1")}
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300 dark:bg-elements">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 justify-items-center items-center">
-              <div>
-                <Image
-                  src={TIE}
-                  width="200px"
-                  height="200px"
-                  alt="/"
-                  className="rounded-full"
-                />
-              </div>
-              <div className="flex flex-col justify-center">
-                <h3 className="text-tile">
-                  TIE Tecnologia da Informação Empresarial
-                </h3>
-                <h3 className="text-green">
-                  {t("translate:resume-job-title-2")}
-                </h3>
-                <h3 className="dark:text-text">2018-2021</h3>
-                <br />
-                <span className="dark:text-text">
-                  {t("translate:resume-job-description-2")}
-                </span>
-              </div>
-            </div>
-          </div>
+          <Job
+            image={WayCarbon}
+            title="WayCarbon"
+            jobTitle="resume-job-title-0"
+            date={"2022-" + t("translate:resume-job-date-1")}
+            description="resume-job-description-0"
+          />
+          <Job
+            image={MundoLolita}
+            title="MundoLolita"
+            jobTitle="resume-job-title-1"
+            date={"2021-" + t("translate:resume-job-date-1")}
+            description="resume-job-description-1"
+          />
         </div>
       </div>
     </div>
