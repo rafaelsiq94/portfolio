@@ -6,9 +6,9 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import useTranslation from "next-translate/useTranslation";
 import { useRouter } from "next/router";
 
-const Main = () => {
-  let router = useRouter();
-  let { t } = useTranslation();
+const Main: React.FC = (): JSX.Element => {
+  const router = useRouter();
+  const { t } = useTranslation();
 
   return (
     <div id="home" className="w-full h-screen text-center">

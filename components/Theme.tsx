@@ -5,21 +5,17 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { US, BR } from 'country-flag-icons/react/3x2';
 
-export default function Theme() {
-  const [darkMode, setDarkMode] = useState(false);
-  const { theme, setTheme } = useTheme();
-  var lang;
-  let router = useRouter();
+interface ThemeProps { }
 
-  if(router.locale == "pt-BR") {
-    lang = "en-US";
-  } else {
-    lang = "pt-BR"; 
-  }
+const Theme: React.FC<ThemeProps> = () => {
+  const { theme, setTheme } = useTheme();
+  const [darkMode, setDarkMode] = useState(false);
+  const router = useRouter();
+  const lang = router.locale == "pt-BR" ? "en-US" : "pt-BR";
 
   const toggleDarkMode = () => {
     setTheme(theme === "dark" ? "light" : "dark");
-    setDarkMode(darkMode === false ? true : false);
+    setDarkMode(prevMode => !prevMode);
   };
 
   return (
@@ -33,11 +29,13 @@ export default function Theme() {
         />
       </div>
       <Link href={router.asPath} locale={lang}>
-        {router.locale == "pt-BR"? 
-          <US title="English" className="cursor-pointer hover:scale-110"/> :
-          <BR title="Portuguese" className="cursor-pointer hover:scale-110"/>
+        {router.locale == "pt-BR" ?
+          <US title="English" className="cursor-pointer hover:scale-110" /> :
+          <BR title="Portuguese" className="cursor-pointer hover:scale-110" />
         }
       </Link>
     </div>
   );
-}
+};
+
+export default Theme;

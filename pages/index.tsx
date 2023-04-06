@@ -15,12 +15,12 @@ export default function Home() {
         <meta name="description" content="Developer website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar/>
-      <Main/>
-      <Skills/>
-      <Resume/>
-      <Contact/>
-      <Footer/>
+      <Navbar />
+      <Main />
+      <Skills />
+      <Resume />
+      <Contact />
+      <Footer />
     </div>
   )
 }

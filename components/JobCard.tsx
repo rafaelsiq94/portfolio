@@ -1,7 +1,15 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import useTranslation from "next-translate/useTranslation";
 
-const Job = ({ image, title, jobTitle, date, description }) => {
+interface JobCardProps {
+  image: StaticImageData;
+  title: string;
+  jobTitle: string;
+  date: string;
+  description: string;
+}
+
+const JobCard = ({ image, title, jobTitle, date, description }: JobCardProps) => {
   const { t } = useTranslation();
 
   return (
@@ -28,4 +36,4 @@ const Job = ({ image, title, jobTitle, date, description }) => {
   );
 };
 
-export default Job;
+export default JobCard;

@@ -1,8 +1,31 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Transition } from "@headlessui/react";
 import { Link } from "react-scroll";
 import Theme from "./Theme";
 import useTranslation from "next-translate/useTranslation";
+
+interface NavbarLinkProps {
+  activeClass: string;
+  to: string;
+  children: React.ReactNode;
+  className?: string;
+  onClick?: () => void;
+}
+
+function NavbarLink(props: NavbarLinkProps) {
+  return (
+    <Link
+      activeClass={props.activeClass}
+      to={props.to}
+      smooth={true}
+      offset={50}
+      duration={500}
+      className="cursor-pointer hover:text-green px-3 py-2 text-md"
+    >
+      {props.children}
+    </Link>
+  );
+}
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +38,7 @@ function Navbar() {
           <div className="flex items-center h-20 w-full bg-white dark:bg-background ">
             <div className="flex items-center sm:mx-10 md:mx-20 justify-between w-full">
               <div className="ml-3 flex justify-center items-center flex-shrink-0">
-                <Theme/>
+                <Theme />
                 <h1 className="ml-14 font-bold text-xl dark:text-title">
                   Rafael de Siqueira
                 </h1>
@@ -23,45 +46,22 @@ function Navbar() {
 
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
-                  <Link
-                    activeClass="Home"
-                    to="home"
-                    smooth={true}
-                    duration={500}
-                    className="cursor-pointer hover:text-green px-3 py-2 text-md"
-                  >
+                  <NavbarLink activeClass="Home" to="home">
                     {t("translate:nav-1")}
-                  </Link>
-                  <Link
-                    activeClass="Skills"
-                    to="skills"
-                    smooth={true}
-                    offset={50}
-                    duration={500}
-                    className="cursor-pointer hover:text-green px-3 py-2 text-md"
-                  >
+                  </NavbarLink>
+                  <NavbarLink activeClass="Skills" to="skills">
                     {t("translate:nav-2")}
-                  </Link>
-                  <Link
-                    activeClass="Resume"
-                    to="resume"
-                    smooth={true}
-                    offset={50}
-                    duration={500}
-                    className="cursor-pointer hover:text-green px-3 py-2 text-md"
-                  >
+                  </NavbarLink>
+                  <NavbarLink activeClass="Resume" to="resume">
                     {t("translate:nav-3")}
-                  </Link>
-                  <Link
+                  </NavbarLink>
+                  <NavbarLink
                     activeClass="Contact"
                     to="contact"
-                    smooth={true}
-                    offset={50}
-                    duration={500}
-                    className="cursor-pointer hover:text-green hover:dark:text-greenDark px-3 py-2 text-md"
+                    className="hover:text-green hover:dark:text-greenDark"
                   >
                     {t("translate:nav-4")}
-                  </Link>
+                  </NavbarLink>
                 </div>
               </div>
             </div>
@@ -123,61 +123,45 @@ function Navbar() {
           leaveTo="opacity-0 scale-95"
         >
           {(ref) => (
-            <div className="md:hidden" id="mobile-menu">
-              <div
-                ref={ref}
-                className="bg-white dark:bg-elements mx-4 mr-20 pt-4 pb-4 space-y-1"
-              >
-                <Link
-                  href="/home"
-                  activeClass="home"
+            <div
+              ref={ref as any}
+              className="md:hidden absolute top-20 w-full bg-white dark:bg-background"
+              id="mobile-menu"
+            >
+              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <NavbarLink
+                  activeClass="Home"
                   to="home"
-                  smooth={true}
-                  duration={500}
-                  className="cursor-pointer hover:text-green dark:text-green hover:dark:text-greenDark block px-3 py-2 rounded-md text-base font-medium"
+                  onClick={() => setIsOpen(false)}
                 >
                   {t("translate:nav-1")}
-                </Link>
-                <Link
-                  href="/skills"
-                  activeClass="skills"
+                </NavbarLink>
+                <NavbarLink
+                  activeClass="Skills"
                   to="skills"
-                  smooth={true}
-                  offset={-100}
-                  duration={500}
-                  className="cursor-pointer hover:text-green dark:text-green hover:dark:text-greenDark block px-3 py-2 rounded-md text-base font-medium"
+                  onClick={() => setIsOpen(false)}
                 >
                   {t("translate:nav-2")}
-                </Link>
-
-                <Link
-                  href="/resume"
-                  activeClass="resume"
+                </NavbarLink>
+                <NavbarLink
+                  activeClass="Resume"
                   to="resume"
-                  smooth={true}
-                  offset={-100}
-                  duration={500}
-                  className="cursor-pointer hover:text-green dark:text-green hover:dark:text-greenDark block px-3 py-2 rounded-md text-base font-medium"
+                  onClick={() => setIsOpen(false)}
                 >
                   {t("translate:nav-3")}
-                </Link>
-
-                <Link
-                  href="/contact"
-                  activeClass="contact"
+                </NavbarLink>
+                <NavbarLink
+                  activeClass="Contact"
                   to="contact"
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                  className="cursor-pointer hover:text-green dark:text-green hover:dark:text-greenDark block px-3 py-2 rounded-md text-base font-medium"
+                  onClick={() => setIsOpen(false)}
+                  className="hover:text-green hover:dark:text-greenDark"
                 >
                   {t("translate:nav-4")}
-                </Link>
+                </NavbarLink>
               </div>
             </div>
           )}
         </Transition>
-
       </nav>
     </div>
   );
