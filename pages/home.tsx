@@ -36,6 +36,7 @@ const Main: React.FC = (): JSX.Element => {
               href="https://www.linkedin.com/in/rafaelsiq94"
               target="_blank"
               rel="noreferrer"
+              aria-label="Linkedin"
             >
               <div className="rounded-full shadow-lg shadow-gray-400 p-6 dark:bg-elements cursor-pointer hover:scale-110 hover:text-green ease-in duration-300">
                 <FaLinkedinIn />
@@ -45,6 +46,7 @@ const Main: React.FC = (): JSX.Element => {
               href="https://github.com/rafaelsiq94/"
               target="_blank"
               rel="noreferrer"
+              aria-label="Github"
             >
               <div className="rounded-full shadow-lg shadow-gray-400 p-6 dark:bg-elements cursor-pointer hover:scale-110 hover:text-green ease-in duration-300">
                 <FaGithub />
@@ -62,13 +64,13 @@ const Main: React.FC = (): JSX.Element => {
               </div>
             </Link>
             {router.locale == "pt-BR" ? (
-              <a href="/assets/resume/RAFAELDESIQUEIRA.pdf" download>
+              <a href="/assets/resume/RAFAELDESIQUEIRA.pdf" aria-label="Resume" download>
                 <div className="rounded-full shadow-lg shadow-gray-400 p-6 dark:bg-elements cursor-pointer hover:scale-110 hover:text-green ease-in duration-300">
                   <BsFillPersonLinesFill />
                 </div>
               </a>
             ) : (
-              <a href="/assets/resume/RAFAELDESIQUEIRAEN.pdf" download>
+              <a href="/assets/resume/RAFAELDESIQUEIRAEN.pdf" aria-label="Resume" download>
                 <div className="rounded-full shadow-lg shadow-gray-400 p-6 dark:bg-elements cursor-pointer hover:scale-110 hover:text-green ease-in duration-300">
                   <BsFillPersonLinesFill />
                 </div>

@@ -80,6 +80,7 @@ const Contact: React.FC = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
+                    aria-label="name"
                   />
                 </div>
                 <div className="flex flex-col">
@@ -90,6 +91,7 @@ const Contact: React.FC = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
+                    aria-label="email"
                   />
                 </div>
               </div>
@@ -103,6 +105,7 @@ const Contact: React.FC = () => {
                   name="subject"
                   value={formData.subject}
                   onChange={handleInputChange}
+                  aria-label="subject"
                 />
               </div>
               <div className="flex flex-col py-2">
@@ -115,6 +118,7 @@ const Contact: React.FC = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
+                  aria-label="message"
                 ></textarea>
               </div>
               <div className="flex justify-center pt-4">
